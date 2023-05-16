@@ -1,4 +1,3 @@
-var value;
 var url="https://api.openweathermap.org/data/2.5/weather?";
 var appid="0518600400a7c09fc0275e93afb2230f";
 main("jammu");  
@@ -6,7 +5,7 @@ main("jammu");
  const btn=document.querySelector(".button");
  btn.addEventListener("click",(e)=>
  {
-     var city=input.value ;
+    var city=input.value ;
      main(city);
  })
          var city1=document.querySelector(".city");
