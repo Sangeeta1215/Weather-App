@@ -32,8 +32,15 @@ main("jammu");
          wind.innerHTML=data.wind.speed +`km/h`;
        }
     }
-    function main(city)
-    {
-     fetch(`${url}q=${city}&appid=${appid}&units=metric`)
-     .then(response=>response.json()).then(data=>myfun(data) )
-    }
+   //  function main(city)
+   //  {
+   //   fetch(`${url}q=${city}&appid=${appid}&units=metric`)
+   //   .then(response=>response.json()).then(data=>myfun(data) );
+   //  }
+
+async function main(city)
+{
+var fetchdata=await fetch(`${url}q=${city}&appid=${appid}&units=metric`);                 
+var resp=await fetchdata.json();
+myfun(resp);
+}
