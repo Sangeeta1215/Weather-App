@@ -41,6 +41,6 @@ main("jammu");
 async function main(city)
 {
 var fetchdata=await fetch(`${url}q=${city}&appid=${appid}&units=metric`);                 
-var resp=await fetchdata.json();
-myfun(resp);
+var res=await fetchdata.json();
+myfun(res);
 }
